@@ -38,7 +38,7 @@ function Vector:limitate(period)
     return newVector(limitate(self.x, period), limitate(self.y, period))
 end
 
-function newVector(x, y)
+function Vec(x, y)
     local v = setmetatable({}, {__index=Vector})
     v.x = x
     v.y = y

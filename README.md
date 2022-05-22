@@ -1,5 +1,30 @@
 # Tango2D
 
+# Values
+* Special value which can be changed once or once per some time, or filter etc...
+```lua
+-- Create once-set value. Will be changed once, but second time it will NOT change
+local val = value.new(value.once)
+
+-- Create once-per value. Will be changed only ONCE PER 5 seconds
+local val = value.new(value.oncePer(5000))
+
+-- Create typed value. Will be changed only to STRING values
+local val = value.new(value.ofType("string"))
+
+-- Create filter value. Will be changed ONLY if Filter returns true
+-- In our case value will be changed to ANY of values if they has hp>0
+local val = value.new(value.filter(
+	function(p) return p.hp > 0 end
+))
+
+-- Change value
+val:set(newVal)
+
+-- Get value
+local v = val:get()
+```
+
 # OOP
 ```lua
 Player = {}
