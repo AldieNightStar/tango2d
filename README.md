@@ -227,6 +227,17 @@ local elems = c:list()
 
 # Graphics
 ```lua
+-- Colors
+-- Check colors.lua file
+color.red
+color.white
+color.green
+
+-- TIC80 Colors
+-- You can use palette from TIC80 console
+-- From 0 up to 15. Supports number overflow
+color.tic[id]
+
 -- Draw the Rectangle
 rect(x, y, w, h, color)
 
