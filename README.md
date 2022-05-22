@@ -1,6 +1,4 @@
-# Graphics
-
-
+# Tango2D
 
 # Colliders
 ```lua
@@ -129,4 +127,47 @@ draws(img, x, y, w, h)
 
 -- Load Image
 local img = gload(filename)
+```
+
+# Controls
+```lua
+-- Is key is pressed
+if key.left then ... end
+if key.right then ... end
+if key.up then ... end
+if key.down then ... end
+if key.space then ... end
+if key.enter then ... end
+if key.esc then ... end
+if key.w then ... end
+if key.a then ... end
+if key.s then ... end
+if key.d then ... end
+-- etc
+
+-- Joystick
+-- There are only p1, p2 player joysticks
+if joy.p1.dpleft then ... end
+if joy.p1.dpright then ... end
+if joy.p1.dpup then ... end
+if joy.p1.dpdown then ... end
+if joy.p1.a then ... end
+if joy.p1.b then ... end
+if joy.p1.x then ... end
+if joy.p1.y then ... end
+if joy.p1.back then ... end
+if joy.p1.start then ... end
+if joy.p1.leftstick then ... end
+if joy.p1.rightstick then ... end
+if joy.p1.leftshoulder then ... end
+if joy.p1.rightshoulder then ... end
+if joy.p1.guide then ... end
+
+-- Mouse
+if mouse.left then ... end
+if mouse.right then ... end
+if mouse.middle then ... end
+if mouse.button4 then ... end
+if mouse.button5 then ... end
+local pos = mouse.position -- {x, y}
 ```
