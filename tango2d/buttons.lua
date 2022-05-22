@@ -30,8 +30,8 @@
 
     mouse = setmetatable({}, {__index=function (t, name)
         if name == "position" then
-            local pos = love.mouse.getPosition()
-            return {x=pos.y, y=pos.y}
+            local mx, my = love.mouse.getPosition()
+            return {x=mx, y=my}
         elseif name == "left" then
             return love.mouse.isDown(1)
         elseif name == "right" then

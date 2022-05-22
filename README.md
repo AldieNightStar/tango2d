@@ -305,6 +305,10 @@ tilex(x, y, color)
 -- Change tile size to draw
 tileSize = 20
 
+-- Get tile-based mouse position
+-- Could be used to know where to put the tile
+local mx, my = tileMousePos()
+
 -- Load Image
 local img = gload(filename)
 ```
