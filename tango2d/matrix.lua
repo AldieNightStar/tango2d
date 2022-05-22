@@ -1,7 +1,7 @@
 function matrix()
     local arr={}
     function arr:get(x,y)
-        if self[y] == nil then self[y] = {} end
+        if self[y] == nil then return nil end
         return self[y][x]
     end
     function arr:set(x, y, val)
