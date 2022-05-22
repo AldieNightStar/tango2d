@@ -153,6 +153,14 @@ local v = v:divide(2)
 -- Subtract from vector
 local v = v:sub(newVector(1,2))
 
+-- Make values closer to 0 by period number
+-- for example v:limitetate(1) will slowly turn to 0 x, y by 1 each call
+local v = v:limitate(period)
+
+-- Bounce vector
+local v = v:bounce(true) -- horizontal bounce
+local v = v:bounce(false) -- vertical bounce
+
 -- Returns true if variable is Vector
 local ok = isVector(v)
 ```

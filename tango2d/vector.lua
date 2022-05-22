@@ -17,6 +17,11 @@ function Vector:negate()
     return newVector(-self.x, -self.y)
 end
 
+function Vector:bounce(horizontal)
+    if horizontal then return newVector(-self.x, self.y)
+    else return newVector(self.x, -self.y) end
+end
+
 function Vector:multiply(num)
     return newVector(self.x*num, self.y*num)
 end
@@ -27,6 +32,10 @@ end
 
 function Vector:sub(v)
     return self:add(v:negate())
+end
+
+function Vector:limitate(period)
+    return newVector(limitate(self.x, period), limitate(self.y, period))
 end
 
 function newVector(x, y)
