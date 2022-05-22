@@ -122,7 +122,7 @@ mid({10, 20, 30}) -- will return 20
 -- Limitate the number. Make it closer to 0
 -- If number > 0 then number -= 0.25
 -- Or if number < 0 then number += 0.25
-limitate(velocity, 0.25)
+local velocity = limitate(velocity, 0.25)
 ```
 
 # Vector
