@@ -296,6 +296,15 @@ draw(img, x, y, sx, sy)
 -- w,h   -- size in pixels
 draws(img, x, y, w, h)
 
+-- Draw tile on the screen
+tile(x, y, color)
+
+-- Draw tile on the screen with litter subtile inside of darker color
+tilex(x, y, color)
+
+-- Change tile size to draw
+tileSize = 20
+
 -- Load Image
 local img = gload(filename)
 ```
