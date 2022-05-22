@@ -39,5 +39,5 @@ color.tic = setmetatable({
     color.newb(148, 176, 194), -- tic Light Grey
     color.newb(86, 108, 134),  -- tic Grey
     color.newb(51, 60, 87),    -- tic Dark Grey
-}, {__index=function(t, n) return t[math.floor(n)%16] end})
+}, {__index=function(t, n) return t[math.floor(n)%#t] end})
 color.tic[0] = color.newb(26, 28, 44) -- tic black

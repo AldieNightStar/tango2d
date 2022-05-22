@@ -233,6 +233,14 @@ color.red
 color.white
 color.green
 
+-- Custom color
+-- each number is float from 0 to 1
+local mycolor = color.new(r,b,g)
+
+-- Custom color 256-type
+-- each number is int from 0 to 255
+local mycolor = color.newb(r,g,b)
+
 -- TIC80 Colors
 -- You can use palette from TIC80 console
 -- From 0 up to 15. Supports number overflow
