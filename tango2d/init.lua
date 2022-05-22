@@ -1,7 +1,6 @@
 json = require 'tango2d.json'
 require 'tango2d.collide'
 require 'tango2d.gcollection'
-require 'tango2d.smachine'
 require 'tango2d.stack'
 require 'tango2d.mathutil'
 require 'tango2d.matrix'
