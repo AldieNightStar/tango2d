@@ -1,5 +1,24 @@
 # Tango2D
 
+# Debug tools
+```lua
+-- Will print out what is inside of the object
+inspect(player, print)
+```
+* Example:
+```
+root.sprite: [number] 12
+root.inventory.rock: [number] 4
+root.inventory.sword: [number] 1
+root.inventory.knife: [number] 1
+root.inventory.bread: [number] 3
+root.inventory.cloth: [number] 16
+root.inventory.food: [number] 1
+root.y: [number] 240
+root.spells.reborn: [number] 2
+root.x: [number] 120
+```
+
 # Save/Load
 ```lua
 -- Save into file json

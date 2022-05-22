@@ -5,8 +5,23 @@ function love.draw()
 end
 
 function love.load()
-	val = {a=1,b=2,c=3,d="Hello!",e={x=1, y=2, force={x=1,y=22, go=function(a,b,c) end}}}
-	inspect(val)
+	player = {
+		x=120,
+		y=240,
+		sprite=12,
+		inventory={
+			sword=1,
+			knife=1,
+			bread=3,
+			cloth=16,
+			food=1,
+			rock=4
+		},
+		spells={
+			reborn=2
+		}
+	}
+	inspect(player, print)
 end
 
 function love.update()
