@@ -12,3 +12,7 @@ end
 function time()
     return math.floor(love.timer.getTime() * 1000)
 end
+
+function tick(max, times_per_second)
+	return math.floor(time()/(1000/times_per_second))%max
+end

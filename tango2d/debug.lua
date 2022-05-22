@@ -1,9 +1,16 @@
-local function str(k)
+function toString(k)
     local r = "??"
     if type(k) == "string" then r = k
     elseif type(k) == "number" then r = ""..k
     elseif type(k) == "boolean" then if k then r = "true" else r = "false" end
-    elseif type(k) == "function" then r = "function("..debug.getinfo(k).nparams.." params)" end
+    elseif type(k) == "function" then r = "function("..debug.getinfo(k).nparams.." params)"
+    elseif type(k) == "table" then
+        local t = "table{ "
+        for tk, _ in pairs(k) do
+            t = t.."\""..tk.."\" "
+        end
+        r = t.."}"
+    end
     return r
 end
 
@@ -12,11 +19,12 @@ function inspect(obj, printFunc, prefix)
     if prefix==nil then prefix = "root." end
     for k, v in pairs(obj) do
         if type(v) == "table" then
-            inspect(v, printFunc, prefix..str(k)..".")
+            inspect(v, printFunc, prefix..toString(k)..".")
         else
-            local rkey = str(k)
-            local rval = str(v)
+            local rkey = toString(k)
+            local rval = toString(v)
             printFunc(prefix..rkey..": ["..type(v).."] "..rval)
         end
     end
+    printFunc("---------------")
 end

@@ -2,7 +2,12 @@
 
 # Debug tools
 ```lua
+-- Turn value into a string representation
+-- Unknown values will be: ??
+local s = toString(value)
+
 -- Will print out what is inside of the object
+-- Could inspect only tables which are iterable with pairs(tableName)
 inspect(player, print)
 ```
 * Example:
@@ -49,7 +54,7 @@ m:set(10, 10, VALUE)
 m:get(10, 10)
 ```
 
-# Once Per some time (Delayer)
+# Timing
 ```lua
 -- Create OncePer object
 local fire_charge = newOnce()
@@ -67,6 +72,10 @@ end
 
 -- Get time in ms since game is started
 local ms = time()
+
+-- Returns number from 0 to max by each call
+-- times_per_second - How fast change the number per second (Maximum: 1000)
+local n = tick(max, time_per_second)
 ```
 
 # Colliders
