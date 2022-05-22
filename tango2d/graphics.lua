@@ -3,6 +3,14 @@ function rect(x, y, w, h, color)
     love.graphics.rectangle('fill', x, y, w, h)
 end
 
+function loadFont(name, size)
+    love.graphics.newFont(name, size)
+end
+
+function gfont(font)
+    love.graphics.setFont(font)
+end
+
 function gprint(text, x, y, size, color)
     if not size then size = 1 end
     if not color then color = color.white end

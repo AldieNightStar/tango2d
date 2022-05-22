@@ -109,6 +109,12 @@ local elems = c:list()
 -- Draw the Rectangle
 rect(x, y, w, h, color)
 
+-- Load font for gprint
+local font = loadFont("Arial.ttf", 16)
+
+-- Set font for gprint
+gfont(font)
+
 -- Print text on the screen
 gprint(text, x, y, size=1, color=white)
 
