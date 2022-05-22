@@ -1,5 +1,19 @@
 # Tango2D
 
+# OOP
+```lua
+Player = {}
+function Player:move() ... end
+function Player:jump() ... end
+function Player:shoot() ... end
+
+-- Create new object that inherits Player
+local player = new({}, Player)
+
+-- Check that variable inherits player
+if typeof(player, Player) then ... end
+```
+
 # Debug tools
 ```lua
 -- Turn value into a string representation
@@ -154,7 +168,7 @@ local v = v:divide(2)
 local v = v:sub(newVector(1,2))
 
 -- Make values closer to 0 by period number
--- for example v:limitetate(1) will slowly turn to 0 x, y by 1 each call
+-- for example v:limitetate(1) will slowly turn to 0 XY by 1 each call
 local v = v:limitate(period)
 
 -- Bounce vector
