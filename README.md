@@ -27,6 +27,9 @@ end)
 if !ok then
 	print("Sorry, only once per 5 seconds")
 end
+
+-- Get unix time in ms
+local ms = time()
 ```
 
 # Colliders

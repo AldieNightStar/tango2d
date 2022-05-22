@@ -1,17 +1,13 @@
 require 'tango2d'
 
 function love.draw()
-	gprint("Hello!", x,y, 4, {1, 0, 0, 1})
-	if key.left or joy.p1.dpleft then
-		x = x - 1
-	elseif key.right or joy.p1.dpright then
-		x = x + 1
+	if state == 1 then
+		gprint("Press start", 50, 50, 1, color.red)
 	end
 end
 
 function love.load()
-	x=10
-	y=10
+	state = 1
 end
 
 function love.update()
