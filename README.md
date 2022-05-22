@@ -342,3 +342,23 @@ if mouse.button4 then ... end
 if mouse.button5 then ... end
 local pos = mouse.position -- {x, y}
 ```
+
+# State Machine
+```lua
+-- Create the state machine
+local s = newStateMachine()
+
+-- register state
+s:register("name", function(s)
+	s.count          -- count of calls since last state change. Starting with 1
+	s.dat            -- argument data from call(...) method
+	s:switch("name") -- change current state to another
+end)
+
+-- change the state
+s:switch("name")
+
+-- call the state
+-- args - will be assigned to s.dat variable (see in register part)
+s:call(args)
+```
