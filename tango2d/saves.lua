@@ -5,7 +5,7 @@ function saves.save(name, value)
 end
 
 function saves.load(name, defaultValue)
-    if love.filesystem.isFile(name) then
+    if love.filesystem.getInfo(name) then
         return json.decode(love.filesystem.read(name))
     end
     return defaultValue
