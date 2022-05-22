@@ -1,15 +1,14 @@
 require 'tango2d'
 
 function love.draw()
-	if state == 1 then
-		gprint("Press start", 50, 50, 1, color.red)
-	end
+	
 end
 
 function love.load()
-	state = 1
+	val = {a=1,b=2,c=3,d="Hello!",e={x=1, y=2, force={x=1,y=22, go=function(a,b,c) end}}}
+	inspect(val)
 end
 
 function love.update()
-	print(time())
+	
 end

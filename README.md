@@ -1,5 +1,23 @@
 # Tango2D
 
+# Save/Load
+```lua
+-- Save into file json
+saves.save("file.json", leveldata)
+
+-- Load from file json
+local leveldata = saves.load("file.json")
+```
+
+# JSON
+```lua
+-- Reads json string and converts to table
+json.decode(str)
+
+-- Reads table and make the json string
+json.encode(obj)
+```
+
 # Matrix
 ```lua
 -- new matrix
