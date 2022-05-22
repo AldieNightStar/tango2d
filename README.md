@@ -24,6 +24,27 @@ root.spells.reborn: [number] 2
 root.x: [number] 120
 ```
 
+# Tasks
+```lua
+-- Create new tasks
+local t = task.new()
+
+-- Check that variable is tasks
+if task.isTask(t) then ... end
+
+-- Call each task and give an argument
+t:call(arg)
+
+-- Call tasks and clear after it
+t:call(arg, true)
+
+-- Add (Accumulate) the task
+t:add(func)
+
+-- Get all tasks as list
+t:list()
+```
+
 # Save/Load
 ```lua
 -- Save into file json
