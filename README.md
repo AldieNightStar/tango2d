@@ -288,16 +288,8 @@ m:get(10, 10)
 -- Create OncePer object
 local fire_charge = newOnce()
 
--- Will call once per N milliseconds
--- Will return true if ok, and false when 5 seconds are not passed yet
-local ok = fire_charge(5000, function()
-	player:fire_charge()
-end)
-
-
-if !ok then
-	print("Sorry, only once per 5 seconds")
-end
+-- Will return true ONCE per N milliseconds
+if fire_charge(5000) then ... end
 
 -- Get time in ms since game is started
 local ms = time()

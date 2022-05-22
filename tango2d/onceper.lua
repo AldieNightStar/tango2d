@@ -1,9 +1,9 @@
 function newOnce()
-    local o = setmetatable({}, {__call=function(self, period, func)
+    local o = setmetatable({}, {__call=function(self, period)
         local time = time()
         if self.allowed == nil then self.allowed = time end
         if time < self.allowed then return false
-        else self.allowed = time + period; func() end
+        else self.allowed = time + period; end
         return true
     end})
     return o
