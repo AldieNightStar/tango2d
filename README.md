@@ -1,5 +1,34 @@
 # Tango2D
 
+# Matrix
+```lua
+-- new matrix
+local m = matrix()
+
+-- set val
+m:set(10, 10, VALUE)
+
+-- get val
+m:get(10, 10)
+```
+
+# Once Per some time (Delayer)
+```lua
+-- Create OncePer object
+local fire_charge = newOnce()
+
+-- Will call once per N milliseconds
+-- Will return true if ok, and false when 5 seconds are not passed yet
+local ok = fire_charge(5000, function()
+	player:fire_charge()
+end)
+
+
+if !ok then
+	print("Sorry, only once per 5 seconds")
+end
+```
+
 # Colliders
 ```lua
 -- Check colliding point with square
