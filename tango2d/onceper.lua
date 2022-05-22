@@ -10,5 +10,5 @@ function newOnce()
 end
 
 function time()
-    return love.timer.getTime() * 1000
+    return math.floor(love.timer.getTime() * 1000)
 end

@@ -28,7 +28,7 @@ if !ok then
 	print("Sorry, only once per 5 seconds")
 end
 
--- Get unix time in ms
+-- Get time in ms since game is started
 local ms = time()
 ```
 

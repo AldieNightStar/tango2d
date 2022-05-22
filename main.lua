@@ -11,5 +11,5 @@ function love.load()
 end
 
 function love.update()
-	
+	print(time())
 end
