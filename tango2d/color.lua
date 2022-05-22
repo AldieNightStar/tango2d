@@ -25,7 +25,7 @@ color.darkRed = color.newb(99, 1, 1)
 
 color.tic = setmetatable({
     color.newb(93, 39, 93),    -- purple
-    color.newb(93, 39, 93),    -- tic red
+    color.newb(177, 62, 83),    -- tic red
     color.newb(239, 125, 87),  -- tic orange
     color.newb(255, 205, 117), -- tic yellow
     color.newb(167, 240, 112), -- tic l-green
@@ -39,5 +39,7 @@ color.tic = setmetatable({
     color.newb(148, 176, 194), -- tic Light Grey
     color.newb(86, 108, 134),  -- tic Grey
     color.newb(51, 60, 87),    -- tic Dark Grey
-}, {__index=function(t, n) return t[math.floor(n)%#t] end})
+}, {__index=function(t, n)
+    return t[math.floor(n)%#t]
+end})
 color.tic[0] = color.newb(26, 28, 44) -- tic black

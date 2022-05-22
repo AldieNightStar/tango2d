@@ -292,11 +292,11 @@ if key.d then ... end
 -- etc
 
 -- Joystick
--- There are only p1, p2 player joysticks
-if joy.p1.dpleft then ... end
-if joy.p1.dpright then ... end
-if joy.p1.dpup then ... end
-if joy.p1.dpdown then ... end
+-- Supports p1, p2, p3 and p4 players
+if joy.p1.left then ... end
+if joy.p1.right then ... end
+if joy.p1.up then ... end
+if joy.p1.down then ... end
 if joy.p1.a then ... end
 if joy.p1.b then ... end
 if joy.p1.x then ... end
