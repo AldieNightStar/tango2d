@@ -4,7 +4,7 @@ function rect(x, y, w, h, color)
 end
 
 function loadFont(name, size)
-    love.graphics.newFont(name, size)
+    return love.graphics.newFont(name, size)
 end
 
 function gfont(font)
